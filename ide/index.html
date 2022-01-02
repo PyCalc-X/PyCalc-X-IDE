@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script>
+            function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        </script>
+        <link href="styles.css" rel="stylesheet">
+        <title>IDE | PyCalc X</title>
+        <link rel="icon" href="logoi.png" type="image/png">
+    </head>
+    <body>
+        <header style="font-size: large; text-align: center; padding-top: 6px;">
+        <div class="p1">   
+          <h1 class="ml10">
+            <span class="text-wrapper">
+              <span class="letters">PyCalc X IDE</span>
+            </span>
+          </h1>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        </div>   
+        <script>
+          // Wrap every letter in a span
+          var textWrapper = document.querySelector('.ml10 .letters');
+          textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+          anime.timeline({loop: true})
+            .add({
+              targets: '.ml10 .letter',
+              rotateY: [-90, 0],
+              duration: 1300,
+              delay: (el, i) => 45 * i
+            }).add({
+              targets: '.ml10',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+        </script> 
+        </header>
+        <main style="font-size: medium; text-align: center; color: #67B5C2;">
+            <div class="p1">
+              <h2 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">An Integrated Development Environment for Pro Developers</span>
+                </span>
+              </h2>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            </div> 
+            <script>
+              // Wrap every letter in a span
+              var textWrapper = document.querySelector('.ml11 .letters');
+              textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+              anime.timeline({loop: true})
+                .add({
+                  targets: '.ml11 .line',
+                  scaleY: [0,1],
+                  opacity: [0.5,1],
+                  easing: "easeOutExpo",
+                  duration: 700
+                })
+                .add({
+                  targets: '.ml11 .line',
+                  translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+                  easing: "easeOutExpo",
+                  duration: 700,
+                  delay: 100
+                }).add({
+                  targets: '.ml11 .letter',
+                  opacity: [0,1],
+                  easing: "easeOutExpo",
+                  duration: 600,
+                  offset: '-=775',
+                  delay: (el, i) => 34 * (i+1)
+                }).add({
+                  targets: '.ml11',
+                  opacity: 0,
+                  duration: 1000,
+                  easing: "easeOutExpo",
+                  delay: 1000
+                });
+            </script>   
+        </main>
+        <div class="center2">
+            <center><button onclick="location.href='https://form.jotform.com/213051516945049'" type="button" class="btn btn-primary btn-lg">Apply</button></center>
+        </div> 
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="ide-debugger.gif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="ide-debugger (1).gif" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <h2 class="ml4">
+            <div class="down">
+              <center>
+                <span class="letters letters-1">Code in 40+ languages</span>
+                <span class="letters letters-2">Access your IDE from any device</span>
+                <span class="letters letters-3">Always start where you left off</span>
+              </center>  
+            </div>  
+          </h2>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+          <script>
+              var ml4 = {};
+              ml4.opacityIn = [0,1];
+              ml4.scaleIn = [0.2, 1];
+              ml4.scaleOut = 3;
+              ml4.durationIn = 800;
+              ml4.durationOut = 600;
+              ml4.delay = 500;
+
+              anime.timeline({loop: true})
+                .add({
+                  targets: '.ml4 .letters-1',
+                  opacity: ml4.opacityIn,
+                  scale: ml4.scaleIn,
+                  duration: ml4.durationIn
+                }).add({
+                  targets: '.ml4 .letters-1',
+                  opacity: 0,
+                  scale: ml4.scaleOut,
+                  duration: ml4.durationOut,
+                  easing: "easeInExpo",
+                  delay: ml4.delay
+                }).add({
+                  targets: '.ml4 .letters-2',
+                  opacity: ml4.opacityIn,
+                  scale: ml4.scaleIn,
+                  duration: ml4.durationIn
+                }).add({
+                  targets: '.ml4 .letters-2',
+                  opacity: 0,
+                  scale: ml4.scaleOut,
+                  duration: ml4.durationOut,
+                  easing: "easeInExpo",
+                  delay: ml4.delay
+                }).add({
+                  targets: '.ml4 .letters-3',
+                  opacity: ml4.opacityIn,
+                  scale: ml4.scaleIn,
+                  duration: ml4.durationIn
+                }).add({
+                  targets: '.ml4 .letters-3',
+                  opacity: 0,
+                  scale: ml4.scaleOut,
+                  duration: ml4.durationOut,
+                  easing: "easeInExpo",
+                  delay: ml4.delay
+                }).add({
+                  targets: '.ml4',
+                  opacity: 0,
+                  duration: 500,
+                  delay: 500
+                });
+          </script>
+          <div class="img2">
+            <center><img src="MergedImages (1)-1.png" width="900"></center>
+          </div>
+          <div class="down">
+            <div class="card">
+              <div class="card-header">
+                Support
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Having Questions?</h5>
+                <p class="card-text">Post your question at the PyCalc X Public forum. Your question shall be addressed within 24 hours.</p>
+                <a href="https://www.pycalc.com/group/pycalc-x-community/discussion" class="btn btn-primary">Go to Forum</a>
+              </div>
+            </div> 
+          </div>   
+          <footer>
+            <div class="down">
+              <div class="alert alert-primary" role="alert">
+                <center style="font-family: Georgia, 'Times New Roman', Times, serif;">&#169; 2020-2021 by PyCalc X</center>
+              </div>
+            </div>
+          </footer>    
+    </body>
+</html>
